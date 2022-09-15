@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <title>Tabele</title>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table -->
+  <table>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption -->
+    <caption style="caption-side: bottom">Lista produktów w koszyku</caption>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup -->
+    <colgroup>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col -->
+      <col />
+      <!-- https://www.w3.org/TR/CSS21/tables.html#columns -->
+      <col span="2" style="background: bisque" />
+    </colgroup>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead -->
+    <thead>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr -->
+      <tr>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th -->
+        <th>Produkt</th>
+        <th>Cena netto</th>
+        <th>Cena brutto</th>
+      </tr>
+    </thead>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody -->
+    <tbody>
+      <tr>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td -->
+        <td>T-shirt</td>
+        <td>16.26 zł</td>
+        <td>20 zł</td>
+      </tr>
+      <tr>
+        <td>Spodnie</td>
+        <td>32.52 zł</td>
+        <td>40 zł</td>
+      </tr>
+    </tbody>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot -->
+    <tfoot>
+      <tr>
+        <td>Razem</td>
+        <td>48.78 zł</td>
+        <td>60 zł</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2></h2>
+
+  <table border="1">
+    <tr>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <td rowspan="2">E</td>
+      <td colspan="3">F</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>H</td>
+      <td>I</td>
+    </tr>
+  </table>
+</html>

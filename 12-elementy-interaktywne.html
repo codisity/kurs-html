@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <title>Elementy interaktywne</title>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details -->
+  <details>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary -->
+    <summary>Natywny HTML'owy akordeon</summary>
+    Nie potrzeba JavaScript, żeby tworzyć rozwijane sekcje jak np. sekcję pytań
+    i odpowiedzi.
+  </details>
+
+  <p>
+    <button type="button" onclick="oknoDialogowe.showModal();">
+      Wyświetl okienko dialogowe
+    </button>
+  </p>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog -->
+  <dialog id="oknoDialogowe">
+    <p>HTML'owe okno dialogowe</p>
+    <form method="dialog">
+      <button>WOW</button>
+    </form>
+  </dialog>
+</html>

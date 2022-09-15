@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <title>Formularze</title>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
+  <form action="https://google.com/search" target="_blank">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
+    <label for="wyszukiwarka-google">Wyszukiwarka Google</label>
+    <br />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+    <input name="q" id="wyszukiwarka-google" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
+    <button>Rozpocznij wyszukiwanie</button>
+  </form>
+
+  <p>&nbsp;</p>
+
+  <form>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types -->
+    <input type="text" value="Domyślna wartość pola" />
+    <br />
+    <input type="text" placeholder="Sugerowany przykład treści" />
+    <br />
+    <input type="checkbox" checked />
+    <br />
+    <input type="checkbox" />
+    <br />
+    <input type="color" />
+    <br />
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea -->
+    <textarea>Domyślny tekst pola</textarea>
+    <br />
+
+    <label for="wybor-smaku-lodow">Wybierz smak:</label>
+    <input list="smaki-lodow" id="wybor-smaku-lodow" name="wybor-smaku-lodow" />
+    <br />
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist -->
+    <datalist id="smaki-lodow">
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option -->
+      <option value="Czekoladowy">Chocolate</option>
+      <option value="Kokosowy">Coconut</option>
+      <option value="Miętowy"></option>
+      <option value="Truskawkowy"></option>
+      <option value="Waniliowy"></option>
+    </datalist>
+    <br />
+
+    <label for="pet-select">Twoje ulubione zwierzę:</label>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
+    <select name="pets" id="pet-select">
+      <option value="" hidden>Wybierz z listy</option>
+
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup -->
+      <optgroup label="Czworonożne">
+        <option value="dog">Pies</option>
+        <option value="cat">Kot</option>
+        <option value="hamster">Chomik</option>
+      </optgroup>
+
+      <optgroup label="Inne">
+        <option value="parrot">Papuga</option>
+        <option value="spider">Pająk</option>
+        <option value="goldfish">Złota rybka</option>
+      </optgroup>
+    </select>
+
+    <p>&nbsp;</p>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset -->
+    <fieldset>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend -->
+      <legend>Wybierz ulubiony kolor</legend>
+
+      <input type="radio" id="red" name="color" />
+      <label for="red">Czerwony</label>
+      <br />
+
+      <input type="radio" id="green" name="color" />
+      <label for="green">Zielony</label>
+      <br />
+
+      <input type="radio" id="blue" name="color" />
+      <label for="blue">Niebieski</label>
+      <br />
+    </fieldset>
+  </form>
+
+  <p>&nbsp;</p>
+
+  <form>
+    <fieldset disabled>
+      <input />
+      <br />
+      <textarea></textarea>
+      <br />
+      <button>Przycisk</button>
+    </fieldset>
+
+    <p>
+      <label for="battery-level-hight battery-level-medium battery-level-low">
+        Poziom naładowania baterii:
+      </label>
+      <br />
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter -->
+      <meter id="battery-level-hight" low="20" max="100" value="90">
+        wysoki
+      </meter>
+      <br />
+      <meter id="battery-level-medium" low="20" max="100" value="50">
+        średni
+      </meter>
+      <br />
+      <meter id="battery-level-low" low="20" max="100" value="10">niski</meter>
+    </p>
+
+    <p>
+      <label for="body-temp-1 body-temp-2 body-temp-3">
+        Temperatura ciała:
+      </label>
+      <br />
+      <meter id="body-temp-1" low="36.0" high="37.0" max="41.0" value="38.0">
+        38.0 C
+      </meter>
+      <br />
+      <meter
+        id="body-temp-2"
+        low="36.0"
+        high="37.0"
+        max="41.0"
+        optimum="36.6"
+        value="38.0"
+      >
+        38.0 C
+      </meter>
+      <br />
+      <meter
+        id="body-temp-3"
+        low="36.0"
+        high="37.0"
+        max="41.0"
+        optimum="36.6"
+        value="38.0"
+        min="35.0"
+      >
+        38.0 C
+      </meter>
+    </p>
+
+    <p>
+      <label for="download-progress">Postęp pobierania:</label>
+      <br />
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress -->
+      <progress id="download-progress" max="100" value="70">70%</progress>
+    </p>
+  </form>
+
+  <p>&nbsp;</p>
+
+  <form
+    oninput="result.value = parseInt(a.value) + parseInt(b.value)"
+    onsubmit="event.preventDefault()"
+  >
+    <input type="range" id="a" name="a" value="50" />
+    +
+    <input type="number" id="b" name="b" value="10" />
+    =
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output -->
+    <output name="result" for="a b">60</output>
+  </form>
+</html>

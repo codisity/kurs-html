@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <title>Skrypty</title>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas -->
+  <canvas width="200" height="200"></canvas>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script -->
+  <script>
+    function draw() {
+      const canvas = document.querySelector("canvas")
+      const context = canvas.getContext("2d")
+
+      context.beginPath()
+      context.moveTo(50, 50)
+      context.lineTo(50, 150)
+      context.lineTo(150, 100)
+      context.fill()
+    }
+    draw()
+  </script>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript -->
+  <noscript>Masz wyłączoną obsługę JavaScript w przeglądarce</noscript>
+</html>

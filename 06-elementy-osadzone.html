@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Elementy osadzone</title>
+  </head>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#the_embed_and_object_elements -->
+
+  <p>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture -->
+    <picture>
+      <source
+        srcset="
+          https://interactive-examples.mdn.mozilla.net/media/cc0-images/surfer-240-200.jpg
+        "
+        media="(min-width: 400px)"
+      />
+      <img
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/painted-hand-298-332.jpg"
+        alt=""
+      />
+    </picture>
+  </p>
+
+  <p>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe -->
+    <iframe
+      width="400"
+      height="250"
+      title="OpenStreetMap"
+      src="https://www.openstreetmap.org/export/embed.html"
+    ></iframe>
+  </p>
+</html>

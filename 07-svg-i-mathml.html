@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <title>SVG i MathML</title>
+
+  <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg -->
+  <svg
+    viewBox="0 0 1000 200"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="DodgerBlue"
+  >
+    <circle cx="100" cy="100" r="50" />
+  </svg>
+
+  <p>
+    The infinite sum
+    <!-- https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math -->
+    <math>
+      <mrow>
+        <munderover>
+          <mo>∑</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow>
+            <mo>+</mo>
+            <mn>∞</mn>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mn>1</mn>
+          <msup>
+            <mi>n</mi>
+            <mn>2</mn>
+          </msup>
+        </mfrac>
+      </mrow>
+    </math>
+    is equal to the real number
+    <math display="inline">
+      <mfrac>
+        <msup>
+          <mi>π</mi>
+          <mn>2</mn>
+        </msup>
+        <mn>6</mn>
+      </mfrac>
+    </math>
+    .
+  </p>
+</html>
